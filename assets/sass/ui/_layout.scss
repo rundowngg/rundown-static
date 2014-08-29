@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Global layout styles
+   ========================================================================== */
+
+/**
+ * front page specific styles
+ */
+
+.front {
+	padding-bottom: 46px;
+}
+
+/**
+ * site wrapper 
+ */
+
+.site {
+	min-height: 100%;
+	position: relative;
+}
+
+/**
+ * site title
+ */
+
+.site-title {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 300;
+
+	.front & {
+		text-shadow: 0 2px 3px rgba(0,0,0,.25);
+		@include media-query(lap) { 
+			margin-bottom: 55px; 
+			letter-spacing: 8px;
+		}
+	}
+} 
+
+/**
+ * footer utility
+ * 
+ * only exists on front page for now. currently allows user to change bg splash
+ */
+
+.footer-util {
+	text-align: right;
+	background: rgba(#000, .15);
+	padding: 12px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0%;
+		left: 8%;
+		width: 84%;
+		height: 1px;
+		background: -moz-linear-gradient(left,  rgba(255,212,128,0) 0%, rgba(255,212,128,0.6) 50%, rgba(255,212,128,0) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,212,128,0)), color-stop(50%,rgba(255,212,128,0.6)), color-stop(100%,rgba(255,212,128,0))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left,  rgba(255,212,128,0) 0%,rgba(255,212,128,0.6) 50%,rgba(255,212,128,0) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left,  rgba(255,212,128,0) 0%,rgba(255,212,128,0.6) 50%,rgba(255,212,128,0) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left,  rgba(255,212,128,0) 0%,rgba(255,212,128,0.6) 50%,rgba(255,212,128,0) 100%); /* IE10+ */
+		background: linear-gradient(to right,  rgba(255,212,128,0) 0%,rgba(255,212,128,0.6) 50%,rgba(255,212,128,0) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffd480', endColorstr='#00ffd480',GradientType=1 ); /* IE6-9 */
+	}
+		
+}
+
+/**
+ * utility form
+ *
+ * @tag form.util-form
+ */
+
+.util-form {}
+	
+	.util-form__label { @extend %visuallyhidden; } 
+
+	.util-form__select { 
+		background: transparent;
+		appearance: none;
+		border: 0;
+		color: #99b1b3;
+	}
+
+	.util-form__submit {
+		/* when js is loaded, hide submit */
+		.js & {
+			display: none;
+		}
+	}

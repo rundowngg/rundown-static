@@ -1,0 +1,48 @@
+/* ==========================================================================
+   base, theme specific, styles
+   ========================================================================== */
+
+/**
+ * html & body styles 
+ */
+
+html, body { height: 100%; }
+
+body {
+	font: {
+		weight: 300;
+		family: $font-family-sans-serif;
+	}
+}
+
+/**
+ * base link styles 
+ */
+
+a {
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+/**
+ * header styles
+ */
+
+h1, h2, h3, h4, h5, h6 {
+	font: {
+		weight: 400;
+	}
+}
+
+/**
+ * forms
+ */
+
+fieldset {
+	margin: 0;
+	border: 0;
+} 
